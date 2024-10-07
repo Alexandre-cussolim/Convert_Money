@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #8A51FC;
+    background-image: url("/assets/backgroud.jpg");
 }
 
 .logo {
@@ -19,7 +19,8 @@ body {
 }
 
 main {
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     background: #F4F4F4;
     border-radius: 20px;
     margin: 0 auto 40px;
@@ -43,6 +44,11 @@ select, input {
     font-size: 16px;
     color: #555555;
     cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:hover, input:hover {
+    border-color: #772FD3; /* Destaca a borda ao passar o mouse */
 }
 
 button {
@@ -82,14 +88,24 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #d2edf6; /* Adiciona fundo branco para maior contraste */
+    border-radius: 10px; /* Bordas levemente arredondadas */
 }
+
+.currency-box img {
+    width: 50px; /* Ajuste o tamanho conforme a necessidade */
+    height: auto;
+}
+
 .currency {
     color: #777777;
     font-size: 14px;
 }
 
-.currency-value, .currency-value-to-convert, .currency-value-libra, .currency-value-euro, .currency-value-bitcoin {
+.currency-value, .currency-value-to-convert {
     color: #555555;
     font-weight: 700;
     font-size: 20px;
